@@ -482,14 +482,28 @@
 
         <section class="fade-section" id="conversation-section" aria-label="Konversationen speichern und anzeigen">
             <h2>Konversationen mit der KI speichern und anzeigen</h2>
-            <textarea id="conversationInput" placeholder="Fügen Sie hier Ihre Konversation ein..."></textarea>
-            <div id="conv-controls">
-                <button id="saveConvBtn" aria-label="Konversation speichern">Speichern</button>
-                <label for="uploadFile" tabindex="0">Konversation Datei hochladen</label>
-                <input type="file" id="uploadFile" accept=".txt" aria-label="Konversation Datei hochladen" />
-                <button id="clearConvBtn" aria-label="Gespeicherte Konversation löschen">Konversation löschen</button>
-            </div>
-            <div id="conversationDisplay" aria-live="polite" aria-label="Gespeicherte Konversation anzeigen"></div>
+             <div id="conversationDisplay" aria-live="polite" aria-label="Gespeicherte Konversation anzeigen" style="margin-top: 1rem; max-height: 300px; overflow-y: auto; background: #143b8f; border-radius: 12px; padding: 1rem; white-space: pre-wrap; font-family: monospace; font-size: 0.95rem; color: #d0d9f9; box-shadow: inset 0 0 12px #3c70df;">
+        <p><strong>1. [Mensch]:</strong> mach mir eine Schulungswebsite über Domain-Betrug-Schulung. Ich habe auch ein Schulungsvideo. Stell mir auch ein Poster dazu.</p>
+        <p><strong>1. [KI]:</strong> Du möchtest eine Trainingswebsite über Domain-Betrug (Domain Betrug Schulung), die ein Schulungsvideo enthält, das du hast. Außerdem möchtest du ein Poster zu diesem Thema.</p>
+        <p><strong>2. [Mensch]:</strong> Ich möchte, dass die Website modern und optisch ansprechend ist, mit dynamischen Effekten und Bildern. Außerdem hätte ich gerne ein Quiz am Ende.</p>
+        <p><strong>2. [KI]:</strong> Du möchtest eine moderne, optisch ansprechende Trainingswebsite zum Thema Domain-Betrug mit dynamischen Effekten, Bildern, einem eingebetteten Schulungsvideo (Platzhalter wird eingefügt) und einem Quiz am Ende. Ein Poster zum Thema soll ebenfalls auf der Website erscheinen.</p>
+        <p><strong>3. [Mensch]:</strong> Im Dunkelmodus.</p>
+        <p><strong>3. [KI]:</strong> Du möchtest die Domain-Betrug-Schulungswebsite im Dunkelmodus. Die vorherige Version nutzt bereits einen dunklen Hintergrund und Farben, die zum Dunkelmodus passen. Ich werde die Farbpalette weiter optimieren, damit sie eindeutig im Dunkelmodus erscheint, mit modernen und ansprechenden Effekten, Bildern, Videoplatzhalter, Quiz und Poster wie zuvor.</p>
+        <p><strong>4. [Mensch]:</strong> ... das war's? Da ist buchstäblich nichts drauf.</p>
+        <p><strong>4. [KI]:</strong> Du hast gemeldet, dass der bereitgestellte HTML-Inhalt im Wesentlichen leer ist oder die erwarteten Inhalte nicht angezeigt werden. Ich überprüfe, ob die gesamte Website mit Dunkelmodus, Videoplatzhalter, Poster, Abschnitten und Quiz enthalten ist. Falls nichts angezeigt wird, kann es am Öffnen der Datei oder fehlenden Elementen liegen.</p>
+        <p><strong>5. [Mensch]:</strong> Ich mag Lila nicht, mach es vielleicht Blau oder eine andere Farbe. Außerdem verstehe ich nicht, was passieren soll, wenn man auf "Mehr erfahren" klickt.</p>
+        <p><strong>5. [KI]:</strong> Du möchtest eine Domain-Betrug-Schulungswebsite im Dunkelmodus mit modernem Design, aber ohne lila Farbschema, stattdessen lieber in Blau oder einer anderen Farbe. Außerdem möchtest du, dass beim Klick auf den Button „Mehr erfahren“ im Poster-Abschnitt etwas Sinnvolles passiert, da aktuell nur ein Alert erscheint. Ich werde das Farbschema auf Blau umstellen und die Funktionalität des Buttons so ändern, dass z. B. zum Quiz oder zu einem Info-Bereich gescrollt wird.</p>
+        <p><strong>6. [Mensch]:</strong> Ich habe ein Poster mit einer Zusammenfassung zu Domain-Betrug. Ich möchte es auf der Website einbinden und auch herunterladen können. Außerdem hätte ich gerne mehr Effekte und Bilder.</p>
+        <p><strong>6. [KI]:</strong> Du möchtest dein eigenes Poster mit einer Zusammenfassung zu Domain-Betrug auf der Website anzeigen und zum Download anbieten. Außerdem wünschst du mehr Effekte und Bilder zur optischen Aufwertung.</p>
+        <p><strong>7. [Mensch]:</strong> Ich habe mehr Bilder und 5 Fragen im Quiz verlangt. Außerdem eine Erklärung, warum sie falsch oder richtig sind.</p>
+        <p><strong>7. [KI]:</strong> (domain-betrug-schulung.html)</p>
+        <p><strong>8. [Mensch]:</strong> Ich hätte auch gerne einen Bereich, wo ich die Konversationen zwischen KI und mir hochladen kann.</p>
+        <p><strong>8. [KI]:</strong> Du möchtest auf der bestehenden Trainingswebsite einen Bereich, wo du Konversationen zwischen dir und mir (der KI) hochladen oder speichern kannst. Da die Seite nur Frontend ist, ist die einfachste Lösung ein Bereich, in dem du Konversationstexte einfügen oder als Textdatei hochladen kannst. Die Seite unterstützt:</p>
+        <p>- Ein Textfeld zum Einfügen von Konversationen und Speichern in localStorage.</p>
+        <p>- Eine Datei-Upload-Funktion für .txt-Dateien, die den Inhalt anzeigt.</p>
+        <p>- Eine Anzeige für die aktuell gespeicherte oder geladene Konversation.</p>
+        <p>- Buttons zum Löschen der gespeicherten Konversation.</p>
+    </div>
         </section>
 
         <section class="fade-section" id="qr-section" aria-label="QR Code Bereich">
