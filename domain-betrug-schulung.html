@@ -1,0 +1,681 @@
+
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Domain Betrug Schulung - Mit Poster, Quiz & Konversationen</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        /* Base & Dark Mode Setup */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #0a192f;
+            color: #d0d9f9;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Animated gradient background in header */
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            padding: 3rem 1rem 5rem;
+            text-align: center;
+            background: linear-gradient(270deg, #0f4c81, #1d6fa5, #3c9ee7, #1d6fa5, #0f4c81);
+            background-size: 800% 800%;
+            animation: gradientBG 20s ease infinite;
+            box-shadow: 0 4px 15px rgba(15,112,180,0.9);
+            position: relative;
+            overflow: hidden;
+        }
+
+            header h1 {
+                font-weight: 700;
+                font-size: 3rem;
+                letter-spacing: 3px;
+                animation: neonGlow 2.5s ease-in-out infinite alternate;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+                color: #a3d4ff;
+            }
+
+        @keyframes neonGlow {
+            from {
+                text-shadow: 0 0 5px #9cceff, 0 0 10px #a3d4ff, 0 0 20px #81b9ff, 0 0 30px #549fff, 0 0 40px #2e88ff;
+            }
+
+            to {
+                text-shadow: 0 0 10px #9cceff, 0 0 20px #b2e1ff, 0 0 30px #94c7ff, 0 0 40px #5daaff, 0 0 50px #3d95ff;
+            }
+        }
+
+        header p.subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-top: 0;
+            color: #9ac7ff;
+            filter: drop-shadow(0 0 3px rgba(173 219 255 / 0.85));
+        }
+
+        main {
+            max-width: 900px;
+            margin: -4rem auto 3rem;
+            background: rgba(10,18,40,0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 0 6px 40px rgba(14,80,150,0.85);
+            padding: 2.5rem 3.5rem;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+            section.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        h2 {
+            color: #7bb3ff;
+            border-bottom: 2px solid #3d75e7;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Images with hover zoom effect */
+        img {
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(47,109,223,0.65);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            max-width: 100%;
+            display: block;
+            margin-top: 1rem;
+        }
+
+            img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 25px rgba(47,109,223,0.85);
+            }
+
+        /* Video container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 6px 25px rgba(47,109,223,0.8), inset 0 0 35px rgba(173,219,255,0.2);
+        }
+
+            .video-container iframe, .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                background: #071526;
+            }
+
+        /* Poster Section */
+        .poster {
+            background: linear-gradient(135deg, #145bbf 0%, #1f7edd 100%);
+            border-radius: 20px;
+            margin: 2.5rem 0;
+            padding: 2.5rem 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(26,81,157,0.8);
+        }
+
+            .poster h3 {
+                font-size: 2.3rem;
+                margin-bottom: 1rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-shadow: 0 0 12px #76aaff, 0 0 18px #6a95ff;
+            }
+
+            .poster p {
+                font-size: 1.3rem;
+                margin-bottom: 1.8rem;
+                text-shadow: 0 0 5px #a5c6ff;
+            }
+
+            .poster .btn, .download-btn {
+                background: #4a90e2;
+                border: none;
+                padding: 1rem 2.5rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #e5f1ff;
+                border-radius: 30px;
+                cursor: pointer;
+                box-shadow: 0 5px 15px #4683d7;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                margin: 0 0.5rem 0.5rem 0.5rem;
+            }
+
+                .poster .btn:hover, .download-btn:hover {
+                    background: #3577d1;
+                    box-shadow: 0 10px 40px #568def;
+                }
+
+        /* Poster image container and style */
+        .poster-image-container {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+            .poster-image-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 14px;
+                box-shadow: 0 8px 30px rgba(26,81,157,0.7);
+                cursor: default;
+            }
+
+        /* Quiz Section */
+        #quiz {
+            background: #12274b;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 6px 30px rgba(71,109,207,0.9);
+        }
+
+            #quiz h2 {
+                color: #99bbff;
+                margin-bottom: 1.5rem;
+            }
+
+        .question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+            .options li {
+                margin-bottom: 0.8rem;
+            }
+
+        label {
+            cursor: pointer;
+            font-size: 1.05rem;
+            user-select: none;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.8rem;
+            accent-color: #4a90e2;
+            cursor: pointer;
+        }
+
+        .feedback {
+            font-style: italic;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            min-height: 2em;
+            color: #a1c0f6;
+        }
+
+        button#submitBtn {
+            background: #4a90e2;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #e5f1ff;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #3f7ddc;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1rem;
+        }
+
+            button#submitBtn:hover {
+                background: #3577d1;
+                box-shadow: 0 10px 35px #5a9bf4;
+            }
+
+        /* Conversation Section */
+        #conversation-section {
+            background: #102a57;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 6px 30px rgba(30,60,120,0.85);
+        }
+
+            #conversation-section h2 {
+                color: #aac9ff;
+                margin-bottom: 1rem;
+            }
+
+        textarea#conversationInput {
+            width: 100%;
+            height: 150px;
+            font-family: monospace;
+            font-size: 1rem;
+            border-radius: 12px;
+            border: none;
+            padding: 1rem;
+            resize: vertical;
+            background: #0f2a5a;
+            color: #d0d9f9;
+            box-shadow: inset 0 0 10px #2a5cb0;
+        }
+
+        #conversationDisplay {
+            margin-top: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+            background: #143b8f;
+            border-radius: 12px;
+            padding: 1rem;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #d0d9f9;
+            box-shadow: inset 0 0 12px #3c70df;
+        }
+
+        #conv-controls {
+            margin-top: 0.8rem;
+        }
+
+            #conv-controls button, #conv-controls label {
+                background: #4a90e2;
+                border: none;
+                padding: 0.8rem 1.5rem;
+                font-weight: 700;
+                color: #e5f1ff;
+                border-radius: 20px;
+                cursor: pointer;
+                box-shadow: 0 5px 15px #3f7ddc;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                margin-right: 0.6rem;
+                user-select: none;
+                display: inline-block;
+            }
+
+                #conv-controls button:hover, #conv-controls label:hover {
+                    background: #3577d1;
+                    box-shadow: 0 10px 35px #5a9bf4;
+                }
+
+        input[type="file"] {
+            display: none;
+        }
+        /* QR code container */
+        #qr-section {
+            text-align: center;
+            background: #11315e;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            box-shadow: 0 6px 30px rgba(30,60,120,0.85);
+        }
+
+            #qr-section h2 {
+                color: #aac9ff;
+                margin-bottom: 1rem;
+            }
+
+        #qr-code {
+            margin: 0 auto;
+            width: 180px;
+            height: 180px;
+            box-shadow: 0 0 15px 3px rgba(74,144,226,0.7);
+            border-radius: 20px;
+        }
+
+        /* Scroll Effects */
+        main > section {
+            will-change: opacity, transform;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #6081b1;
+            margin: 2rem 0 3rem;
+            font-size: 0.9rem;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            main {
+                padding: 1.5rem 1.5rem;
+                margin: -4rem 1rem 3rem;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .poster h3 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Domain Betrug Schulung</h1>
+        <p class="subtitle">Schützen Sie Ihre digitale Identität von Betrug und Missbrauch</p>
+    </header>
+    <main>
+        <section class="fade-section">
+            <h2>Was ist Domain Betrug?</h2>
+            <p>Domain-Betrug ist eine perfide Methode, bei der Cyberkriminelle gefälschte Internetadressen nutzen, um Vertrauen zu erschleichen. Oft sehen diese Domains täuschend echt aus – sie imitieren seriöse Unternehmen, Banken oder Online-Plattformen, um ahnungslose Nutzer zur Eingabe sensibler Daten zu verleiten. Durch Tricks wie Typosquatting (z. B. „amaz0n.de“ statt „amazon.de“) oder Homograph-Angriffe (z. B. austauschbare Sonderzeichen) gelangen Nutzer oft unbemerkt auf manipulierte Seiten. Die Folgen: Identitätsdiebstahl, finanzielle Verluste oder kompromittierte Systeme in Unternehmen. Ziel dieser Schulung ist es, dich für die typischen Merkmale solcher Betrugsversuche zu sensibilisieren, dir konkrete Erkennungsmerkmale zu zeigen und praxisnahe Schutzmaßnahmen mitzugeben. Denn: Nur wer die Maschen der Angreifer kennt, kann sich wirksam schützen.</p>
+            <img src="https://images.unsplash.com/photo-1591696331115-109ab0db9280?auto=format&fit=crop&w=800&q=60" alt="Symbolisches Bild Domain Betrug" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60" alt="Sicherheit Symbolbild" />
+        </section>
+
+        <section class="fade-section">
+            <h2>Schulungs Video</h2>
+            <p>Schau dir unser Video an, um mehr über die Tricks der Angreifer zu erfahren.</p>
+            <div class="video-container" aria-label="Video zur Domain Betrug Schulung">
+                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=60">
+                    <source src="Video/Vorsicht vor Domain-Betrug! Informationsvideo (1) (1) (1).mp4" type="video/webm" />
+                    Ihr Browser unterstützt keine Videos.
+                </video>
+            </div>
+        </section>
+
+        <section class="poster fade-section" aria-label="Poster zur Domain Betrug Schulung">
+            <h3>Vorsicht bei Domain Betrug!</h3>
+            <p>Erkennen. Verstehen. Schützen.<br />Lernen Sie, wie Sie sich und Ihr Unternehmen vor Domain Betrug schützen.</p>
+            <button class="btn" id="mehrErfahrenBtn">Mehr erfahren</button>
+        </section>
+
+        <section class="fade-section" id="poster-summary-section" aria-label="Zusammenfassung Poster">
+            <h2>Zusammenfassung Poster</h2>
+            <div class="poster-image-container">
+                <img src="Images/DomainBetrugSchulungPoster.png" alt="Zusammenfassung Poster zu Domain Betrug" id="summary-poster" />
+                <br />
+                <a href="Images/DomainBetrugSchulungPoster.png" download="DomainBetrugZusammenfassung.png" class="download-btn" aria-label="Poster herunterladen">Poster herunterladen</a>
+            </div>
+        </section>
+
+        <section class="fade-section" id="quiz-section">
+            <h2>Quiz: Testen Sie Ihr Wissen</h2>
+            <div id="quiz">
+                <div class="quiz-question" data-index="0">
+                    <p class="question">1. Was ist ein typisches Ziel von Domain Betrug?</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q0" value="0" /> Zugang zu privaten Daten erlangen</label></li>
+                        <li><label><input type="radio" name="q0" value="1" /> Eine echte Webseite verbessern</label></li>
+                        <li><label><input type="radio" name="q0" value="2" /> Server schneller machen</label></li>
+                    </ul>
+                    <p class="feedback" aria-live="polite"></p>
+                </div>
+                <div class="quiz-question" data-index="1">
+                    <p class="question">2. Was bedeutet Phishing im Zusammenhang mit Domain Betrug?</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q1" value="0" /> Eine sichere Verbindung herstellen</label></li>
+                        <li><label><input type="radio" name="q1" value="1" /> Gefälschte Webseiten zur Datenfischerei</label></li>
+                        <li><label><input type="radio" name="q1" value="2" /> Eine Domain neu registrieren</label></li>
+                    </ul>
+                    <p class="feedback" aria-live="polite"></p>
+                </div>
+                <div class="quiz-question" data-index="2">
+                    <p class="question">3. Wie können Sie sich vor Domain Betrug schützen?</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q2" value="0" /> Vorsicht bei verdächtigen Links und Mails</label></li>
+                        <li><label><input type="radio" name="q2" value="1" /> Niemals Passwörter ändern</label></li>
+                        <li><label><input type="radio" name="q2" value="2" /> Jede Mail sofort öffnen</label></li>
+                    </ul>
+                    <p class="feedback" aria-live="polite"></p>
+                </div>
+                <div class="quiz-question" data-index="3">
+                    <p class="question">4. Was ist Domain-Spoofing?</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q3" value="0" /> Eine Domain fälschen, um Vertrauen zu erwecken</label></li>
+                        <li><label><input type="radio" name="q3" value="1" /> Einen Server schneller machen</label></li>
+                        <li><label><input type="radio" name="q3" value="2" /> Ein sicheres Passwort erstellen</label></li>
+                    </ul>
+                    <p class="feedback" aria-live="polite"></p>
+                </div>
+                <div class="quiz-question" data-index="4">
+                    <p class="question">5. Wie können Unternehmen sich vor Domain Betrug schützen?</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q4" value="0" /> Regelmäßige Überwachung und Absicherung der Domains</label></li>
+                        <li><label><input type="radio" name="q4" value="1" /> Keine SSL-Zertifikate verwenden</label></li>
+                        <li><label><input type="radio" name="q4" value="2" /> Keine Backups machen</label></li>
+                    </ul>
+                    <p class="feedback" aria-live="polite"></p>
+                </div>
+                <button id="submitBtn" aria-label="Quiz auswerten">Antworten überprüfen</button>
+                <p id="score" aria-live="polite" style="font-weight:700; margin-top:1rem;"></p>
+            </div>
+        </section>
+
+        <section class="fade-section" id="conversation-section" aria-label="Konversationen speichern und anzeigen">
+            <h2>Konversationen mit der KI speichern und anzeigen</h2>
+            <textarea id="conversationInput" placeholder="Fügen Sie hier Ihre Konversation ein..."></textarea>
+            <div id="conv-controls">
+                <button id="saveConvBtn" aria-label="Konversation speichern">Speichern</button>
+                <label for="uploadFile" tabindex="0">Konversation Datei hochladen</label>
+                <input type="file" id="uploadFile" accept=".txt" aria-label="Konversation Datei hochladen" />
+                <button id="clearConvBtn" aria-label="Gespeicherte Konversation löschen">Konversation löschen</button>
+            </div>
+            <div id="conversationDisplay" aria-live="polite" aria-label="Gespeicherte Konversation anzeigen"></div>
+        </section>
+
+        <section class="fade-section" id="qr-section" aria-label="QR Code Bereich">
+            <h2>QR Code zur Webseite</h2>
+            <canvas id="qr-code" aria-label="QR Code"></canvas>
+            <p>Scannen Sie den QR Code, um diese Webseite schnell auf Ihrem Mobilgerät zu öffnen.</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Domain Betrug Schulung. Alle Rechte vorbehalten.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script>
+        // Fade in sections on scroll
+        function onScrollFadeIn() {
+            const sections = document.querySelectorAll('.fade-section');
+            const triggerBottom = window.innerHeight * 0.85;
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', onScrollFadeIn);
+        window.addEventListener('load', onScrollFadeIn);
+
+        // Quiz data with explanations for answers
+        const quizData = [
+            {
+                correct: 0,
+                explanation: [
+                    "Richtig! Domain Betrüger wollen oft an private Daten kommen.",
+                    "Falsch. Eine echte Webseite verbessern ist kein Ziel von Betrug.",
+                    "Falsch. Server schneller machen hat nichts mit Domain Betrug zu tun."
+                ]
+            },
+            {
+                correct: 1,
+                explanation: [
+                    "Falsch. Eine sichere Verbindung herstellen ist positiv, kein Betrug.",
+                    "Richtig! Phishing nutzt gefälschte Webseiten, um Daten zu stehlen.",
+                    "Falsch. Eine Domain neu registrieren ist neutral, kein Betrug."
+                ]
+            },
+            {
+                correct: 0,
+                explanation: [
+                    "Richtig! Vorsicht bei verdächtigen Links und Mails schützt vor Betrug.",
+                    "Falsch. Niemals Passwörter ändern ist kontraproduktiv.",
+                    "Falsch. Jede Mail sofort öffnen kann riskant sein."
+                ]
+            },
+            {
+                correct: 0,
+                explanation: [
+                    "Richtig! Domain-Spoofing fälscht Domains, um Vertrauen zu schaffen.",
+                    "Falsch. Server schneller machen ist keine Methode des Betrugs.",
+                    "Falsch. Sichere Passwörter erstellen schützt, ist kein Betrug."
+                ]
+            },
+            {
+                correct: 0,
+                explanation: [
+                    "Richtig! Kontinuierliche Überwachung hilft, Betrug zu verhindern.",
+                    "Falsch. SSL-Zertifikate sind wichtig für Sicherheit.",
+                    "Falsch. Backups sind essenziell für Schutz und Wiederherstellung."
+                ]
+            }
+        ];
+
+        const submitBtn = document.getElementById('submitBtn');
+        const scoreDisplay = document.getElementById('score');
+
+        submitBtn.addEventListener('click', () => {
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-question');
+            questions.forEach((q, i) => {
+                const selected = q.querySelector('input[type="radio"]:checked');
+                const feedback = q.querySelector('.feedback');
+                if (selected) {
+                    const val = parseInt(selected.value);
+                    if (val === quizData[i].correct) {
+                        feedback.textContent = "Richtig! " + quizData[i].explanation[val];
+                        feedback.style.color = '#7cff88';
+                        score++;
+                    } else {
+                        feedback.textContent = "Falsch! " + quizData[i].explanation[val];
+                        feedback.style.color = '#ff7070';
+                    }
+                } else {
+                    feedback.textContent = 'Bitte wählen Sie eine Antwort.';
+                    feedback.style.color = '#ffc870';
+                }
+            });
+            scoreDisplay.textContent = `Ihre Punktzahl: ${score} / ${quizData.length}`;
+            if (score === quizData.length) {
+                scoreDisplay.style.color = '#72f07c';
+            } else {
+                scoreDisplay.style.color = '#f08080';
+            }
+        });
+
+        // "Mehr erfahren" scroll to summary poster section
+        const mehrErfahrenBtn = document.getElementById('mehrErfahrenBtn');
+        mehrErfahrenBtn.addEventListener('click', () => {
+            const posterSection = document.getElementById('poster-summary-section');
+            posterSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Conversation Storage Logic
+        const conversationInput = document.getElementById('conversationInput');
+        const saveConvBtn = document.getElementById('saveConvBtn');
+        const conversationDisplay = document.getElementById('conversationDisplay');
+        const clearConvBtn = document.getElementById('clearConvBtn');
+        const uploadFile = document.getElementById('uploadFile');
+
+        // Load saved conversation on page load
+        window.addEventListener('load', () => {
+            const savedConv = localStorage.getItem('savedConversation');
+            if (savedConv) {
+                conversationDisplay.textContent = savedConv;
+            }
+        });
+
+        // Save conversation from textarea to localStorage and display
+        saveConvBtn.addEventListener('click', () => {
+            const text = conversationInput.value.trim();
+            if (text) {
+                localStorage.setItem('savedConversation', text);
+                conversationDisplay.textContent = text;
+                conversationInput.value = '';
+                alert('Konversation wurde gespeichert.');
+            } else {
+                alert('Bitte geben Sie eine Konversation ein, bevor Sie speichern.');
+            }
+        });
+
+        // Clear conversation from localStorage and display
+        clearConvBtn.addEventListener('click', () => {
+            if (confirm('Wollen Sie die gespeicherte Konversation wirklich löschen?')) {
+                localStorage.removeItem('savedConversation');
+                conversationDisplay.textContent = '';
+                conversationInput.value = '';
+            }
+        });
+
+        // Load conversation from uploaded file and display
+        uploadFile.addEventListener('change', e => {
+            const file = e.target.files[0];
+            if (file && file.type === "text/plain") {
+                const reader = new FileReader();
+                reader.onload = function (ev) {
+                    const content = ev.target.result;
+                    conversationDisplay.textContent = content;
+                    // Save to localStorage as well
+                    localStorage.setItem('savedConversation', content);
+                    alert('Konversation wurde geladen und gespeichert.');
+                };
+                reader.readAsText(file);
+            } else {
+                alert('Bitte laden Sie eine gültige .txt Datei hoch.');
+            }
+            // Clear the file input so user can upload same file again if needed
+            uploadFile.value = '';
+        });
+
+        // QR Code generation
+        const qrCanvas = document.getElementById('qr-code');
+        // Generate QR code for current page URL
+        if (window.QRCode) {
+            QRCode.toCanvas(qrCanvas, window.location.href, { width: 180, margin: 2, color: { dark: '#4a90e2', light: '#fff0' } }, function (error) {
+                if (error) console.error(error);
+            });
+        } else {
+            // If QRCode library not loaded fallback:
+            qrCanvas.style.display = 'none';
+            const qrSection = document.getElementById('qr-section');
+            const note = document.createElement('p');
+            note.textContent = 'QR Code konnte nicht geladen werden.';
+            note.style.color = '#ff6060';
+            qrSection.appendChild(note);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</body>
+</html>
+
+,
