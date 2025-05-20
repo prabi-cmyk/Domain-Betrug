@@ -109,6 +109,22 @@
         }
 
         /* Images with hover zoom effect */
+        section {
+    width: 100%; /* Ensure the section takes full width */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+}
+
+img {
+    width: 100%; /* Set width to 100% */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(47,109,223,0.65);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block; /* Ensure it behaves like a block element */
+    margin-top: 1rem; /* Add margin if needed */
+}
+
         img {
             border-radius: 12px;
             box-shadow: 0 6px 16px rgba(47,109,223,0.65);
