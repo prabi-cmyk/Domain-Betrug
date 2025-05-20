@@ -481,18 +481,7 @@
         </section>
 
         <section class="fade-section" id="conversation-section" aria-label="Konversationen speichern und anzeigen">
-            <h2>Konversationen mit der KI speichern und anzeigen</h2>
-            
-
-   <textarea id="conversationInput" placeholder="Fügen Sie hier Ihre Konversation ein..."></textarea>
-            <div id="conv-controls">
-                <button id="saveConvBtn" aria-label="Konversation speichern">Speichern</button>
-                <label for="uploadFile" tabindex="0">Konversation Datei hochladen</label>
-                <input type="file" id="uploadFile" accept=".txt" aria-label="Konversation Datei hochladen" />
-                <button id="clearConvBtn" aria-label="Gespeicherte Konversation löschen">Konversation löschen</button>
-            </div>
-            <div id="conversationDisplay" aria-live="polite" aria-label="Gespeicherte Konversation anzeigen"></div>
-          
+            <h2>Konversationen mit der KI </h2>
              <div id="conversationDisplay" aria-live="polite" aria-label="Gespeicherte Konversation anzeigen" style="margin-top: 1rem; max-height: 300px; overflow-y: auto; background: #143b8f; border-radius: 12px; padding: 1rem; white-space: pre-wrap; font-family: monospace; font-size: 0.95rem; color: #d0d9f9; box-shadow: inset 0 0 12px #3c70df;">
            <p><strong>Konversation zum erstellen von Webseite: </strong></p>
         <p><strong>1. [Mensch]:</strong> mach mir eine Schulungswebsite über Domain-Betrug-Schulung. Ich habe auch ein Schulungsvideo. Stell mir auch ein Poster dazu.</p>
@@ -518,14 +507,16 @@
     </div>
         </section>
 
-        <section class="fade-section" id="qr-section" aria-label="QR Code Bereich">
-            <h2>QR Code zur Webseite</h2>
-            <canvas id="qr-code" aria-label="QR Code"></canvas>
-            <p>Scannen Sie den QR Code, um diese Webseite schnell auf Ihrem Mobilgerät zu öffnen.</p>
-        </section>
+       <section class="fade-section" id="qr-section" aria-label="QR Code Bereich">
+        <h2>QR Code zur Webseite</h2>
+        <div class="qr-code-container">
+            <img id="qr-code" src="Images/qrcode_prabi-cmyk.github.io (2).png" alt="QR Code" />
+        </div>
+        <p>Scannen Sie den QR Code, um diese Webseite schnell auf Ihrem Mobilgerät zu öffnen.</p>
+    </section>
     </main>
     <footer>
-        &copy; 2024 Domain Betrug Schulung. Alle Rechte vorbehalten.
+        &copy; 2025 Domain Betrug Schulung. Alle Rechte vorbehalten.
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <script>
